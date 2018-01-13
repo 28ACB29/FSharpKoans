@@ -13,18 +13,18 @@ module ``about tuples`` =
     [<Koan>]
     let CreatingTuples() =
         let items = ("apple", "dog")
-        
-        AssertEquality items ("apple", __)
-        
+
+        AssertEquality items ("apple", "dog")
+
     [<Koan>]
     let AccessingTupleElements() =
         let items = ("apple", "dog")
-        
+
         let fruit = fst items
         let animal = snd items
-        
-        AssertEquality fruit __
-        AssertEquality animal __
+
+        AssertEquality fruit "apple"
+        AssertEquality animal "dog"
 
     [<Koan>]
     let AccessingTupleElementsWithPatternMatching() =
@@ -36,37 +36,37 @@ module ``about tuples`` =
            Pattern matching works with tuples of any arity, and it allows you to 
            simultaneously break apart the tuple while assigning a name to each 
            value. Here's an example. *)
-        
+
         let items = ("apple", "dog", "Mustang")
-        
+
         let fruit, animal, car = items
-        
-        AssertEquality fruit __
-        AssertEquality animal __
-        AssertEquality car __
-        
+
+        AssertEquality fruit "apple"
+        AssertEquality animal "dog"
+        AssertEquality car "Mustang"
+
     [<Koan>]
     let IgnoringValuesWithPatternMatching() =
         let items = ("apple", "dog", "Mustang")
-        
+
         let _, animal, _ = items
-        
-        AssertEquality animal __
-    
+
+        AssertEquality animal "dog"
+
     (* NOTE: pattern matching is found in many places
              throughout F#, and we'll revisit it again later *)
-        
+
     [<Koan>]
     let ReturningMultipleValuesFromAFunction() =
         let squareAndCube x =
             (x ** 2.0, x ** 3.0)
-        
+
         let squared, cubed = squareAndCube 3.0
-        
-        
-        AssertEquality squared __
-        AssertEquality cubed __
-    
+
+
+        AssertEquality squared 9.0
+        AssertEquality cubed 27.0
+
     (* THINK ABOUT IT: Is there really more than one return value?
                        What type does the squareAndCube function
                        return? *)
@@ -75,7 +75,7 @@ module ``about tuples`` =
     let TheTruthBehindMultipleReturnValues() =
         let squareAndCube x =
             (x ** 2.0, x ** 3.0)
-            
+
         let result = squareAndCube 3.0
-       
-        AssertEquality result __
+
+        AssertEquality result (9.0, 27.0)

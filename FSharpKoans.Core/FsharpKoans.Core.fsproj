@@ -71,8 +71,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="pnunit.framework">
-      <HintPath>..\packages\NUnit.2.5.10.11092\lib\pnunit.framework.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\pNUnit.2.6.4\lib\pnunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

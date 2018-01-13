@@ -27,12 +27,12 @@ module ``about asserts`` =
     [<Koan>]
     let AssertExpectation() =
         let expected_value = 1 + 1
-        let actual_value = __ //start by changing this line
-     
+        let actual_value = 2 //start by changing this line
+
         AssertEquality expected_value actual_value
  
     //Easy, right? Now try one more
 
     [<Koan>]
     let FillInValues() =
-        AssertEquality (1 + 1) __
+        AssertEquality (1 + 1) 2
