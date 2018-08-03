@@ -29,7 +29,7 @@ module ``about functions`` =
 
     [<Koan>]
     let NestingFunctions() =
-        let quadruple x =    
+        let quadruple x =
             let double x =
                 x * 2
 

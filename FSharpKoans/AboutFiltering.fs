@@ -29,7 +29,7 @@ module ``about filtering`` =
         // Find all the names starting with "A" using an anonymous function
         let actual_names = 
             names
-            |> List.filter (fun name -> name.StartsWith( "A" ))
+            |> List.filter (fun name -> name.StartsWith("A"))
      
         AssertEquality actual_names [ "Alice" ]
 
@@ -52,7 +52,7 @@ module ``about filtering`` =
 
         let actual_name = 
             names
-            |> List.find (fun name -> name = "Bob" )
+            |> List.find (fun name -> name = "Bob")
             
         //??? What would happen if there are 2 Bob's in the List?
 
@@ -65,10 +65,10 @@ module ``about filtering`` =
         // tryFind returns an option so you can handle 0 rows returned
         let eve = 
             names
-            |> List.tryFind (fun name -> name = "Eve" )
+            |> List.tryFind (fun name -> name = "Eve")
         let zelda = 
             names
-            |> List.tryFind (fun name -> name = "Zelda" )
+            |> List.tryFind (fun name -> name = "Zelda")
             
         AssertEquality eve.IsSome true
         AssertEquality zelda.IsSome false
